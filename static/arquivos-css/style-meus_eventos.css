@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: url('/static/arquivos-css/images/fundo2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+a{
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #24252a;
+    font-family: "Montserrat", sans-serif;
+}
+
+.events-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #006680;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #444;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0088a9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #006680;
+}
+
+.my-events {
+    margin-top: 30px;
+}
+
+#event-list p {
+    text-align: center;
+    color: #666;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+}
+
+#event-list div {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-buttons button,
+.cta,
+.overlay__content button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.name-user {
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 0px 20px;
+}
+
+.nav-buttons button {
+    transition: color 0.3s ease 0s;
+}
+
+.nav-buttons button:hover {
+    color: #a90000;
+}
+
+.cta {
+    margin-right: 0;
+    padding: 9px 15px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+    background-color: rgba(0, 100, 128, 1);
+}
+
+/* Estilos para os Meus Eventos Criados */
+.my-events-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.titulo_historico_eventos{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+#deletar-evento{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    
+}
+.event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+    margin: 0 0 10px 0; /* Espaçamento inferior */
+    font-size: 1rem;
+    color: #006680;
+}
+
+.event-card .status {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px; /* Espaçamento entre o status e o botão */
+}
+
+.status{
+    padding-bottom: 10px;
+}
+.alinhar-eventos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.alinhar-criarEventos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+.color-btn-criar{
+    margin-right: 0;
+    padding: 9px 15px;
+    background-color: rgb(72 190 40);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    color: #edf0f1;
+}
+   
+
+.delete-btn {
+    align-self: center; /* Faz o botão ficar apenas do tamanho do texto */
+    padding: 5px 10px; /* Reduz o espaçamento interno */
+    font-size: 0.8rem; /* Deixa o texto menor */
+    color: white;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}

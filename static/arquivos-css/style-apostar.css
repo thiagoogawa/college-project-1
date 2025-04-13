@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: url("/static/arquivos-css/images/fundo3.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+a {
+    font-size: 0.9em;
+    /* Font menor */
+    font-weight: 600;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #24252a;
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+    transition: color 0.3s ease 0s;
+}
+
+.nav-buttons button:hover {
+    color: #4682B4;
+}
+
+.cta {
+    margin-right: 0;
+    padding: 7px 12px;
+    /* Menor padding */
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    color: #f5f5f5;
+}
+
+.cta:hover {
+    background-color: rgba(0, 100, 128, 1);
+}
+
+.name-user {
+    font-size: 1em;
+    /* Font menor */
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 0px 15px;
+}
+
+.engloba-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* Menor espaço entre cards */
+    padding: 15px;
+}
+
+.cards {
+    background: rgba(255, 255, 255, 0.85);
+    /* Mais transparente */
+    padding: 12px;
+    /* Menor padding */
+    border-radius: 8px;
+    /* Bordas mais suaves */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra mais suave */
+    max-width: 450px;
+    /* Largura menor */
+    width: 100%;
+}
+
+.top-card h3,
+.cards h3 {
+    color: #006680;
+    margin-bottom: 12px;
+    /* Menor espaço */
+}
+
+.cards h3,
+.cards p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mid-card {
+    margin: 15px 0;
+}
+
+.datas p {
+    margin: 4px 0;
+    font-size: 0.8rem;
+    /* Font menor */
+    color: #333;
+}
+
+.bottom-card {
+    margin-top: 15px;
+    /* Menor espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Menor gap */
+}
+
+.bottom-card label {
+    font-size: 0.85rem;
+    /* Font bem menor */
+    color: #444;
+}
+
+.bottom-card input {
+    padding: 8px;
+    font-size: 0.85rem;
+    /* Font menor */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.bet-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Menor gap */
+}
+
+.bet-buttons button {
+    background-color: #0088a9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    /* Menor padding */
+    font-size: 0.85rem;
+    /* Font menor */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-buttons button:hover {
+    background-color: #006680;
+}
+
+.events-container {
+    padding: 15px;
+    /* Menor padding */
+    max-width: 650px;
+    /* Menor largura */
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    /* Bordas mais suaves */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra mais suave */
+}
+
+h2 {
+    font-size: 1.6rem;
+    /* Font menor */
+    margin-bottom: 15px;
+    /* Menor espaço */
+    text-align: center;
+    color: #006680;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Menor gap */
+}
+
+form label {
+    font-size: 0.9rem;
+    /* Font menor */
+    color: #444;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 8px;
+    /* Menor padding */
+    font-size: 0.9rem;
+    /* Font menor */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0088a9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #006680;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cards {
+        max-width: 85%;
+        /* Largura menor */
+    }
+
+    .bet-buttons button {
+        font-size: 0.8rem;
+        /* Font menor */
+        padding: 5px 10px;
+        /* Menor padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .engloba-cards {
+        padding: 8px;
+        /* Menor padding */
+    }
+
+    .cards {
+        padding: 8px;
+        /* Menor padding */
+        font-size: 0.75rem;
+        /* Font bem menor */
+    }
+
+    .bet-buttons button {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        /* Font ainda menor */
+    }
+}
+
+.icone-pesquisa {
+    cursor: pointer;
+}
+
+.icone-pesquisa img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Barra de Pesquisa */
+.caixa-search {
+    position: relative;
+    margin: 0 auto;
+    background-color: #333;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    width: 50px;
+    /* Define largura inicial */
+}
+
+.caixa-texto {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0px;
+    /* Inicialmente invisível */
+    transition: width 0.4s;
+    cursor: pointer;
+}
+
+.caixa-search:hover .caixa-texto {
+    width: 200px;
+    /* Mostra o campo de texto ao expandir */
+    padding: 0 5px;
+}
+
+.botao-search {
+    color: #e84118; /* Cor vermelha para o ícone */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+.caixa-search:hover>.botao-search {
+    background-color: #fff;
+}
+.caixa-search .botao-search {
+    color: #e84118 !important; /* Força a cor vermelha */
+}
+.caixa-search:hover {
+    width: 260px;
+    /* Expande ao passar o mouse */
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-cadastro.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+</head>
+<body>
+
+    <div class="cadastro">
+        <h1>Cadastro</h1>
+        <form action="#" method="post" id="signupForm">
+            <div class="input-row">
+                <div class="input-field">
+                    <input type="text" id="nome-id" name="nome" placeholder="Nome" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email-id" name="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="input-field">
+                <input type="text" id="cpf-id" name="cpf" placeholder="CPF" required>
+            </div>
+            <div class="input-field">
+                <input type="date" id="data_nascimento-id" name="data_nascimento" required>
+            </div>
+            <div class="input-row">
+                <div class="input-field">
+                    <input type="password" id="pass-id" name="senha" placeholder="Senha" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirmarsenha" name="confirmarsenha" placeholder="Confirmar Senha" required>
+                </div>
+            </div>
+            <input type="submit" id="btn-cadastro" value="Cadastrar">
+        </form>
+    </div>
+
+    <script src="/static/arquivos-js/user.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/arquivos-css/images/fundo2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* HEADER E NAVEGAÇÃO */
+header {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.name-user {
+    display: flex;
+    align-items: center;
+}
+
+#user-info p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+    color: #d1d1d1;
+}
+
+.logout {
+    margin-right: 0;
+    padding: 9px 15px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    color: #edf0f1;
+    transition: background-color 0.3s ease 0s;
+
+}
+
+a {
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.icone-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icone-pesquisa svg:hover {
+    fill: #3578e5;
+}
+
+/* CONTAINER DO FORMULÁRIO */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 200px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4e90fe;
+}
+
+/* FORMULÁRIO */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #4e90fe;
+    box-shadow: 0 0 5px rgba(78, 144, 254, 0.3);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e90fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3578e5;
+}
+
+button:disabled {
+    background-color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+.aviso-pix,
+.aviso-banco {
+    font-size: 14px;
+    color: #4682B4;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para os campos de formulário */
+@media (max-width: 768px) {
+
+    #banco-info,
+    #pix-info {
+        padding: 10px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #banco-info .input-group,
+    #pix-info .input-group {
+        width: 100%;
+    }
+
+    .aviso-banco,
+    .aviso-pix {
+        font-size: 12px;
+        /* Reduz tamanho do texto de aviso */
+        color: #4682B4;
+        margin-bottom: 10px;
+        text-align: left;
+        /* Garante alinhamento no mobile */
+    }
+
+    #btnWithdraw {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+        /* Garante que o botão ocupe toda a largura */
+    }
+
+    .container {
+        margin: 30px auto; /* Margens menores em telas pequenas */
+    }
+}
+
+/* Para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    input,
+    select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .aviso-banco,
+    .aviso-pix {
+        font-size: 11px;
+    }
+
+    #btnWithdraw {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .container {
+        margin: 20px auto; /* Reduz ainda mais em telas muito pequenas */
+    }
+}

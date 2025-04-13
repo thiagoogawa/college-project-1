@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/arquivos-css/style-home.css">
+  <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+  <title>Home</title>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+
+      <div class="name-user">
+        <section id="user-info">
+          <a id="user-name" href="http://localhost:5000/home"></a>
+        </section>
+      </div>
+
+
+      <div class="nav-buttons">
+        <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+        <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+        <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'"
+          id="btnAddFunds">Minha carteira</button>
+      </div>
+      <button type="button" class="logout" id="logoutButton">Sair</button>
+
+      <div class="icone-pesquisa">
+        <section class="caixa-search">
+          <input class="caixa-texto" id="search-input" type="text" placeholder="Pesquisar...">
+          <button class="botao-search" id="search-button" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+
+        </section>
+      </div>
+    </nav>
+
+  </header>
+
+
+
+  <!-- Destaques -->
+  <section class="destaques">
+    <h2>Destaques</h2>
+
+    <div class="div-color">
+      <!-- Eventos Próximos de Vencer -->
+      <h3 class="subtitulo-home">Eventos Próximos de Vencer</h3>
+      <div class="destaques-card">
+
+      </div>
+    </div>
+
+    <div class="div-color">
+      <h3 class="subtitulo-home">Eventos Mais Apostados</h3>
+      <!-- Eventos Mais Apostados -->
+      <div class="destaques-card-mais-votados">
+
+
+      </div>
+    </div>
+
+
+
+    <!-- Categorias de Eventos -->
+    <div class="categorias">
+      <h3>Categorias</h3>
+      <div class="categorias-card" onclick="applyFilterAndRedirect('Futebol')">
+        <img src="/static/arquivos-css/images/futebol.jpg" alt="Futebol">
+        <p>Futebol</p>
+      </div>
+      <div class="categorias-card" onclick="applyFilterAndRedirect('Basquetebol')">
+        <img src="/static/arquivos-css/images/basquete.jpg" alt="Basquetebol">
+        <p>Basquetebol</p>
+      </div>
+      <div class="categorias-card" onclick="applyFilterAndRedirect('Voleibol')">
+        <img src="/static/arquivos-css/images/volei.jpg" alt="Voleibol">
+        <p>Voleibol</p>
+      </div>
+      <div class="categorias-card" onclick="applyFilterAndRedirect('Fórmula 1')">
+        <img src="/static/arquivos-css/images/formula1.jpg" alt="Fórmula 1">
+        <p>Fórmula 1</p>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <script src="/static/arquivos-js/user.js" defer></script>
+  <script src="/static/arquivos-js/events.js" defer></script>
+  <script src="/static/arquivos-js/home.js" defer></script>
+  <script src="/static/arquivos-js/categorias.js" defer></script>
+
+</body>
+
+</html>

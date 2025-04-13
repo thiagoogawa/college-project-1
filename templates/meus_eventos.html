@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-meus_eventos.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Meus Eventos</title>
+</head>
+
+<body>
+    <section class="navbar">
+        <header>
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+            <nav>
+                <div class="nav-buttons">
+                    <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'"
+                        id="btnAddFunds">Minha carteira</button>
+                </div>
+            </nav>
+            <div>
+                <button type="submit" class="cta" id="logoutButton">Sair</button>
+                
+            </div>
+        </header>
+    </section>
+
+    <div class="my-events-container">
+        <div class="alinhar-criarEventos">
+            <button type="submit" class="color-btn-criar" class="my-events"
+                onclick="location.href='http://localhost:5000/events/criarEventos'">Criar Eventos
+            </button>  
+        </div>
+        
+        <h2>Meus Eventos Criados</h2>
+        <div id="event-list">
+            <div class="event-card">
+
+                <ul class="alinhar-eventos" id="id-do-evento"></ul>
+                <ul class="alinhar-eventos" id="nome-evento"></ul>
+                <ul class="alinhar-eventos" id="status-evento"></ul>
+                <ul id="deletar-evento"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/arquivos-js/events.js" defer></script>
+    <script src="/static/arquivos-js/user.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-minha_wallet.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Minha Wallet</title>
+
+</head>
+
+<body>
+    <section class=navbar>
+        <header>
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+            <nav>
+                <div class="nav-buttons">
+                    <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'"id="btnAddFunds">Minha carteira</button>
+                </div>
+            </nav>
+            <div>
+                <button type="submit" class="cta" id="logoutButton">Sair</button>
+            </div>
+        </header>
+    </section>
+
+    <div class="wallet-container">
+
+        <div class="card">
+            <div class="balance">
+                <p>Saldo Atual</p>
+                <h2 id="saldo"></h2>
+            </div>
+        </div>
+
+        <div class="balance-actions">
+            <h3>Gerenciar Saldo</h3>
+
+            <div class="button-wallet">
+                <button type="button" id="button-action"
+                    onclick="location.href='http://localhost:5000/users/addFundsForm'">Adicionar Saldo</button>
+                <button type="button" id="button-action"
+                    onclick="location.href='http://localhost:5000/users/withdrawForm'">Sacar Dinheiro</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wallet-history">
+        <h3>Histórico</h3>
+
+        <div class="historico-container">
+            <div class="historico_addDinheiro">
+                <h4>Compras de Crédito:</h4>
+                <ul id="compras-credito">
+
+                </ul>
+            </div>
+
+            <div class="historico_compras">
+                <h4>Valores Apostados:</h4>
+
+                <ul id="valores-apostados">
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="/static/arquivos-js/user.js"></script>
+</body>
+
+</html>

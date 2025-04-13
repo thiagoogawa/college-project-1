@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-addFunds.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Cadastro de Cartão</title>
+</head>
+
+<body>
+    <section class="navbar">
+        <header>
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+            <nav>
+                <div class="nav-buttons">
+                    <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'">Minha carteira</button>
+                </div>
+            </nav>
+            <div>
+                <button type="submit" class="cta" id="logoutButton">Sair</button>
+            </div>
+
+
+        </header>
+
+    </section>
+
+    <div class="container">
+        <h1>Adicionar crédito</h1>
+        <form id="card-info-form">
+            <div>
+                <label for="numero">Número do Cartão:</label>
+                <input type="text" id="numero-id" name="numero" required>
+            </div>
+            <div>
+                <label for="nome">Nome do Titular:</label>
+                <input type="text" id="nome-id" name="nome" required>
+            </div>
+            <div>
+                <label for="data_vencimento">Data de Vencimento:</label>
+                <input type="date" id="data_vencimento-id" name="data_vencimento" required>
+            </div>
+            <div>
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc-id" name="cvc" required>
+            </div>
+            <div>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor-id" name="valor" required>
+            </div>
+            <button type="submit" id="btnAddFunds">Salvar</button>
+        </form>
+    </div>
+
+    <script src="/static/arquivos-js/user.js" defer></script>
+</body>
+
+</html>

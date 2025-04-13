@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-withdraw_Funds.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Saque de Fundos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'" id="btnAddFunds">Minha Carteira</button>
+            </div>
+            <div class="button-sair">
+                <button type="button" class="logout" id="logoutButton">Sair</button>
+            </div>
+              
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Solicitar Saque</h1>
+        <form id="withdraw-form">
+            <!-- Data do Saque -->
+            <div class="input-group">
+                <label for="data">Data do Saque:</label>
+                <input type="date" id="data-id" name="data" required>
+            </div>
+
+            <!-- Opção de Saque -->
+            <div class="input-group">
+                <label for="opcao">Opção de Saque:</label>
+                <select id="opcao-id" name="opcao" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="0">Banco</option>
+                    <option value="1">PIX</option>
+                </select>
+            </div>
+
+            <!-- Dados para Saque via Banco -->
+            <div id="banco-info" class="opcao-saque">
+                <p class="aviso-banco">* Preencha somente se a opção de saque for 'Banco'.</p> <!-- Aviso de preenchimento para Banco -->
+                <div class="input-group">
+                    <label for="banco">Nome do Banco:</label>
+                    <input type="text" id="banco-id" name="banco">
+                </div>
+                <div class="input-group">
+                    <label for="agencia">Agência:</label>
+                    <input type="text" id="agencia-id" name="agencia">
+                </div>
+                <div class="input-group">
+                    <label for="conta">Conta:</label>
+                    <input type="text" id="conta-id" name="conta">
+                </div>
+                <div class="input-group">
+                    <label for="digito">Dígito:</label>
+                    <input type="text" id="digito-id" name="digito">
+                </div>
+            </div>
+
+            <!-- Dados para Saque via PIX -->
+            <div id="pix-info" class="opcao-saque">
+                <p class="aviso-pix">* Preencha somente se a opção de saque for 'PIX'.</p> <!-- Aviso de preenchimento para PIX -->
+                <div class="input-group">
+                    <label for="pix">Chave PIX:</label>
+                    <input type="text" id="pix-id" name="pix">
+                </div>
+            </div>
+
+            <!-- Valor do Saque -->
+            <div class="input-group">
+                <label for="valor">Valor de Saque:</label>
+                <input type="number" id="valor-id" name="valor" placeholder="Ex: 1000.00" min="1000" max="101000" required>
+            </div>
+
+            <!-- Botão de Solicitar Saque -->
+            <button type="submit" id="btnWithdraw">Solicitar Saque</button>
+        </form>
+    </div>
+
+    <script src="/static/arquivos-js/user.js"></script>
+</body>
+</html>

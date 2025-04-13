@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-buscar-eventos.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Buscar Eventos</title>
+</head>
+<body>
+    <section class="navbar">
+        <header>
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+            <nav>
+                <div class="nav-buttons">
+                    <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'"
+                        id="btnAddFunds">Minha carteira</button>
+                </div>
+            </nav>
+            <div>
+                <button type="submit" class="cta" id="logoutButton">Sair</button>
+                
+            </div>
+        </header>
+    </section>
+
+    <div class="engloba-cards">
+
+
+    </div>
+
+    <script src="/static/arquivos-js/user.js" defer></script>
+    <script src="/static/arquivos-js/events.js" defer></script>
+</body>
+</html>

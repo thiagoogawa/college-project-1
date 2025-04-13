@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-events.css') }}">
+    <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+    <title>Eventos</title>
+</head>
+
+<body>
+    <section class="navbar">
+        <header>
+            <div class="name-user">
+                <section id="user-info">
+                    <a id="user-name" href="http://localhost:5000/home"></a>
+                </section>
+            </div>
+            <nav>
+                <div class="nav-buttons">
+                    <button type="button" onclick="location.href='http://localhost:5000/events/apostarEvents'">Apostar</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/events/meusEventos'">Meus Eventos</button>
+                    <button type="button" onclick="location.href='http://localhost:5000/users/minhaWalletForm'"
+                      id="btnAddFunds">Minha carteira</button>
+                  </div>
+            </nav>
+            <div>
+                <button type="submit" class="cta" id="logoutButton">Sair</button>
+            </div>
+        </header>
+    </section>
+
+    <div class="events-container">
+        <section class="create-event">
+            <h2>Criar Evento</h2>
+            <form id="event-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title-events"  required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea type="text" id="descricao-events"  rows="4"  required></textarea>
+
+                <label for="valor_de_cada_cota">Valor de Cada Cota (R$):</label>
+                <input type="number" id="valor_de_cada_cota-events"  required>
+
+                <label for="periodo_para_apostar_inicio">Início do Período para Apostar: (YYYY-MM-DD HH:MM:SS)</label>
+                <input type="text" id="periodo_para_apostar_inicio-events" required>
+
+                <label for="periodo_para_apostar_fim">Fim do Período para Apostar: (YYYY-MM-DD HH:MM:SS)</label>
+                <input type="text" id="periodo_para_apostar_fim-events"  required>
+
+                <label for="data_acontecimento">Data do Acontecimento: (YYYY-MM-DD)</label>
+                <input type="text" id="data_acontecimento-events" required>
+
+                <button type="submit" class="cta" id="criar-Evento">Criar Evento</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="/static/arquivos-js/events.js" defer></script>
+    <script src="/static/arquivos-js/user.js" defer></script>
+</body>
+
+</html>

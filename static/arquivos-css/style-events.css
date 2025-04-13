@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: url('/static/arquivos-css/images/fundo2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+p{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;   
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #24252a;
+    font-family: "Montserrat", sans-serif;
+}
+
+.events-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #006680;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #444;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0088a9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #006680;
+}
+
+.my-events {
+    margin-top: 30px;
+}
+
+#event-list p {
+    text-align: center;
+    color: #666;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+}
+
+#event-list div {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.nav-buttons button,
+.cta,
+.overlay__content button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+a{
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.name-user {
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 0px 20px;
+}
+
+.nav-buttons button {
+    transition: color 0.3s ease 0s;
+}
+
+.nav-buttons button:hover {
+    color: #4682B4;
+}
+
+.cta {
+    margin-right: 0;
+    padding: 9px 15px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}

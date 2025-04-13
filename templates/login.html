@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='arquivos-css/style-login.css') }}">
+  <link rel="shortcut icon" type="image/png" href="/static/arquivos-css/images/letter-c.png"/>
+
+  <title>Login</title>
+ 
+</head>
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Login</h2>
+        <div class="input-field">
+        <input type="text" id="email-login" placeholder="E-mail" required>
+        <label>Digite o email</label>
+      </div>
+      <div class="input-field">
+        <input type="password"  id="pass-login" placeholder="Senha" required>
+        <label>Digite a senha</label>
+      </div>
+      
+      <button type="submit" id="btnLogin">Log In</button>
+
+      <div class="register">
+        <button type="submit" id="btn-chamar-cadastro">Cadastre-se</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script  src="/static/arquivos-js/user.js" defer></script>
+</body>
+</html>
